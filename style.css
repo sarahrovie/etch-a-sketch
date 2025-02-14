@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    width: 40rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-div {
+    width: 10rem;
+    height: 10rem;
+    border: 2px solid black;
+}
+
+@media only screen and (max-width: 644px) {
+    #container {
+        width: 25rem;
+    }
+
+    .grid-div {
+        width: 6rem;
+        height: 6rem;
+    }
+}
+
+@media only screen and (max-width: 385px) {
+    .grid-div {
+        width: 5rem;
+        height: 5rem;
+    }
+}
