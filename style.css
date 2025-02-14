@@ -12,8 +12,17 @@
 body {
     min-height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
+}
+
+button {
+    font-size: 1.5rem;
+    width: 16rem;
+    height: 3rem;
+    margin: 1rem;
+    padding: 0.3rem;
 }
 
 #container {
@@ -42,7 +51,7 @@ body {
     }
 }
 
-@media only screen and (max-width: 385px) {
+@media only screen and (max-width: 300px) {
     .grid-div {
         width: 5rem;
         height: 5rem;

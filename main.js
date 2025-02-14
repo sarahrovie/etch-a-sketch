@@ -26,3 +26,4 @@ gridDivs.forEach(div => {
         changeColor(div);
     })
 });
+
