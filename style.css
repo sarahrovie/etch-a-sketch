@@ -48,3 +48,7 @@ body {
         height: 5rem;
     }
 }
+
+.hover-color {
+    background: darkslategray;
+}

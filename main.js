@@ -14,3 +14,15 @@ const createDivs = () => {
 }
 
 createDivs();
+
+const gridDivs = document.querySelectorAll(".grid-div");
+
+const changeColor = (div) => {
+    div.classList.add("hover-color");
+}
+
+gridDivs.forEach(div => {
+    div.addEventListener("mouseenter", () => {
+        changeColor(div);
+    })
+});
