@@ -1,11 +1,11 @@
 const container = document.querySelector("#container");
 const btn = document.querySelector("#grid-btn");
 
-let i = 1;
 
-const createDivs = (num = 16) => {   
+const createDivs = (num = 17) => {   
+    let i = 1;
 
-    while (i <= num) {
+    while (i < num) {
         const newDiv = document.createElement("div");
         newDiv.setAttribute("id", i);
         newDiv.setAttribute("class", "grid-div");
@@ -14,7 +14,18 @@ const createDivs = (num = 16) => {
     }
 }
 
-createDivs();
+btn.addEventListener("click", () => {
+    const number = parseInt(prompt("Number of squares per side:"));
+
+    if (number > 100) {
+        alert("Please input a number above 1 and below 100!");
+    }
+
+    const numOfDivs = (number * number) + 1; 
+
+    removeAllChildren(container);
+    createDivs(numOfDivs);
+})
 
 const gridDivs = document.querySelectorAll(".grid-div");
 
@@ -33,16 +44,3 @@ const removeAllChildren = (parent) => {
         parent.removeChild(parent.firstChild);
     }
 }
-
-btn.addEventListener("click", () => {
-    const number = parseInt(prompt("Number of squares per side:"));
-
-    if (number > 100) {
-        alert("Please input a number below 100!");
-    }
-
-    const numOfDivs = number * number; 
-    
-    removeAllChildren(container);
-    createDivs(numOfDivs);
-})
