@@ -24,8 +24,9 @@ const removeAllChildren = (parent) => {
 btn.addEventListener("click", () => {
     const number = parseInt(prompt("Number of squares per side:"));
 
-    if (number > 100) {
+    if (!number || number <= 1 || number > 100) {
         alert("Please input a number above 1 and below 100!");
+        return;
     }
 
     removeAllChildren(container);
