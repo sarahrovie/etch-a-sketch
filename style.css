@@ -10,55 +10,48 @@
 }
 
 body {
+    background-color: black;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 }
 
 button {
-    font-size: 1.5rem;
+    background-color: green;
+    color: whitesmoke;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 1.2rem;
     width: 16rem;
     height: 3rem;
-    margin: 1rem;
+    margin-bottom: 1rem;
     padding: 0.3rem;
 }
 
 #container {
-    width: 40rem;
+    background-color: whitesmoke;
+    width: 90vw;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .grid-row {
     display: flex;
+    width: 100%;
 }
 
 .grid-div {
-    width: 10rem;
-    height: 10rem;
-    border: 2px solid black;
+    flex: auto;
+    aspect-ratio: 1/1;
+    border: 1px solid darkslategray;
 }
 
-@media only screen and (max-width: 644px) {
+@media only screen and (min-width: 1024px) {
     #container {
-        width: 25rem;
-    }
-
-    .grid-div {
-        width: 6rem;
-        height: 6rem;
-    }
-}
-
-@media only screen and (max-width: 300px) {
-    .grid-div {
-        width: 5rem;
-        height: 5rem;
+        width: 40vw;
     }
 }
 
